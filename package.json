@@ -1,0 +1,19 @@
+{
+  "name": "5.7-uso-de-app-publicas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oscar Lozano",
+  "license": "ISC",
+  "dependencies": {
+    "axion": "^0.1.0",
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
