@@ -23,11 +23,26 @@
               <label for="endDateInput">End date</label>
               <input type="date" id="endDateInput" name="end-date">
 
-              <input id="get" type="submit" value="GET">
+              <input id="get" type="submit" value="POST">
           </form>
           </div>
         </div>
       </div>
-</body>
+<% for (let i = 0; i<10 ;i++) {%>
+  <div class="card mt-2 container">
+  <div class="row">
+    <div class="col-4">
+    <h2><%= arreglo[i].name %></h2>
+    <h2>¿Is potentially hazardous asteroid? <%= arreglo[i]["is_potentially_hazardous_asteroid"] %></h2>
+    <% let link =  `${arreglo[i]["nasa_jpl_url"]}` %>
+    <% console.log(link) %>
+    <a href=<%=link%> target="_blank" >Link</a>
+  </div>
+</div>
+</div>
+<% }; %>
+      
+
+  </body>
 </html>
 </html>

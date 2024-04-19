@@ -16,16 +16,14 @@ app.get("/", (req, res) => {
 app.post("/images", async (req, res) => {
     let start = req.body["start-date"];
     let end = req.body["end-date"];
-    const response = await axios.get("https://api.nasa.gov/neo/rest/v1/feed", {
-        params: {
-            start_date: start,
-            end_date: end,
-            api_key: apiKey,
-        }
-    });
-    let frase = JSON.stringify(response.data);
-    console.log(response.data['near_earth_objects'][start][0]);
+    const response = await axios.get("https://api.nasa.gov/neo/rest/v1/feed", { params: { start_date: start, end_date: end, api_key: apiKey, } })
+    let arreglo = response.data['near_earth_objects'][end];
+    console.log(arreglo);
+    res.render("index.ejs", { arreglo })
 })
+
+
+
 app.listen(port, () => {
     console.log(`The server is on ${port} port`)
 })
